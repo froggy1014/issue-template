@@ -17,7 +17,7 @@ body:
     id: current_behavior
     attributes:
       label: "Current behavior"
-      description: "What happens today or what limitation are you hitting?"
+      description: "Describe the current behavior or pain point."
     validations:
       required: true
   - type: textarea
