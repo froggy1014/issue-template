@@ -8,68 +8,29 @@ body:
   - type: textarea
     id: search_terms
     attributes:
-      label: "Search terms"
-      description: "What did you search for before filing this request?"
-      placeholder: "e.g. useQueries support, custom query import path"
+      label: "Description"
+      description: "Describe the request briefly."
+      placeholder: "e.g. generate useQueries hooks for grouped endpoints"
     validations:
       required: true
   - type: textarea
-    id: problem
+    id: current_behavior
     attributes:
-      label: "Problem statement"
-      description: "What problem are you trying to solve?"
+      label: "Current behavior"
+      description: "What happens today or what limitation are you hitting?"
     validations:
       required: true
   - type: textarea
-    id: proposal
+    id: proposed_behavior
+    attributes:
+      label: "Proposed behavior"
+      description: "What should the behavior be?"
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_solution
     attributes:
       label: "Proposed solution"
       description: "What would you like to see added or changed?"
     validations:
       required: true
-  - type: textarea
-    id: alternatives
-    attributes:
-      label: "Alternatives and workarounds"
-      description: "What alternatives or workarounds are you using today?"
-    validations:
-      required: false
-  - type: textarea
-    id: use_cases
-    attributes:
-      label: "Use cases"
-      value: |
-        1. Primary use case:
-        2. Secondary use case:
-        3. Impact if not implemented:
-    validations:
-      required: true
-  - type: textarea
-    id: acceptance_criteria
-    attributes:
-      label: "Acceptance criteria"
-      description: "Concrete conditions to consider this done."
-      value: |
-        - [ ]
-        - [ ]
-        - [ ]
-    validations:
-      required: true
-  - type: textarea
-    id: test_plan
-    attributes:
-      label: "Test plan"
-      description: "How should we verify this in a PR review?"
-      value: |
-        1.
-        2.
-        3.
-    validations:
-      required: false
-  - type: textarea
-    id: additional_context
-    attributes:
-      label: "Additional context"
-      description: "Links, screenshots, or references that help."
-    validations:
-      required: false

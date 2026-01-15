@@ -27,6 +27,17 @@ body:
     validations:
       required: true
   - type: textarea
+    id: environment
+    attributes:
+      label: "Environment"
+      description: "Orval and Node.js versions are required. Also include framework/library versions if relevant."
+      value: |
+        - Orval version: 7.3.0
+        - Node.js version: 18.x
+        - Framework/library versions (e.g. Next.js, React Query):
+    validations:
+      required: true
+  - type: textarea
     id: expected_behavior
     attributes:
       label: "Expected behavior"
