@@ -1,5 +1,5 @@
-name: "Bug report (General)"
-description: "Report a problem not directly caused by OpenAPI input"
+name: "Bug report"
+description: "Report a problem so we can reproduce and fix it"
 body:
   - type: markdown
     attributes:
@@ -8,7 +8,7 @@ body:
 
         Reproduction is required. If we cannot reproduce the issue, we will close it as needs-repro.
 
-        If you suspect the OpenAPI document is part of the problem, use the "Bug report (OpenAPI/OAS)" template instead.
+        If this is OpenAPI-related, validate your spec at https://editor.swagger.io and include the results.
   - type: input
     id: orval_version
     attributes:
@@ -63,12 +63,22 @@ body:
         - "Not sure"
     validations:
       required: true
+  - type: dropdown
+    id: oas_related
+    attributes:
+      label: "OpenAPI related?"
+      options:
+        - "Yes"
+        - "No"
+        - "Not sure"
+    validations:
+      required: true
   - type: textarea
     id: search_terms
     attributes:
       label: "Search terms"
       description: "What did you search for before filing this issue?"
-      placeholder: "e.g. react-query mutation types, generated types mismatch"
+      placeholder: "e.g. react-query mutation types, openapi_31 validation error"
     validations:
       required: true
   - type: textarea
@@ -98,6 +108,43 @@ body:
       description: "What actually happens?"
     validations:
       required: true
+  - type: textarea
+    id: openapi_version
+    attributes:
+      label: "OpenAPI version (if applicable)"
+      placeholder: "e.g. 3.0.3 or 3.1.0"
+    validations:
+      required: false
+  - type: textarea
+    id: openapi_document
+    attributes:
+      label: "OpenAPI document (minimal, if applicable)"
+      description: |
+        If OpenAPI-related, provide the smallest possible OpenAPI document that reproduces the issue.
+        Paste YAML/JSON or link to a public repo/file.
+      value: |
+        ```yaml
+        openapi: 3.0.3
+        info:
+          title: Demo
+          version: 0.0.0
+        paths: {}
+        ```
+    validations:
+      required: false
+  - type: textarea
+    id: swagger_validation
+    attributes:
+      label: "Swagger Editor validation (if applicable)"
+      description: |
+        If OpenAPI-related, validate the spec at https://editor.swagger.io and paste the results.
+        Include errors, warnings, and any link or screenshot.
+      placeholder: |
+        - Errors:
+        - Warnings:
+        - Link or screenshot:
+    validations:
+      required: false
   - type: textarea
     id: config
     attributes:
