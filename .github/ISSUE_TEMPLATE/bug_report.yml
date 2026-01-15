@@ -1,0 +1,102 @@
+name: "Bug report"
+description: "Report a problem so we can reproduce and fix it"
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please search existing issues before filing a new one.
+
+        Reproduction is required. If we cannot reproduce the issue, we will close it as needs-repro.
+
+        If this might be OpenAPI-related, validate the spec at https://editor.swagger.io and include the results below.
+  - type: textarea
+    id: search_terms
+    attributes:
+      label: "Search terms"
+      description: "What did you search for before filing this issue?"
+      placeholder: "e.g. react-query mutation types, openapi_31 validation error"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: "Reproduction steps"
+      description: |
+        Provide a minimal reproduction. This is required.
+        Include a repo link or a minimal code snippet and clear steps to run it.
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: "Expected behavior"
+      description: "What should happen?"
+    validations:
+      required: true
+  - type: textarea
+    id: actual_behavior
+    attributes:
+      label: "Actual behavior"
+      description: "What actually happens?"
+    validations:
+      required: true
+  - type: dropdown
+    id: oas_related
+    attributes:
+      label: "OpenAPI (OAS) related?"
+      options:
+        - "Yes"
+        - "No"
+        - "Not sure"
+    validations:
+      required: true
+  - type: textarea
+    id: oas_validation
+    attributes:
+      label: "OpenAPI validation (optional)"
+      description: |
+        If you answered Yes or Not sure, validate the spec at https://editor.swagger.io and paste the result.
+        Include the spec snippet or a link to the validated spec.
+      placeholder: |
+        Result from https://editor.swagger.io
+        - Errors:
+        - Warnings:
+        - Link or snippet:
+    validations:
+      required: false
+  - type: textarea
+    id: config
+    attributes:
+      label: "Configuration"
+      description: "Relevant generator config or options."
+      value: |
+        ```ts
+        // config snippet
+        ```
+    validations:
+      required: false
+  - type: textarea
+    id: environment
+    attributes:
+      label: "Environment"
+      value: |
+        - OS:
+        - Node:
+        - Package manager:
+        - Package version:
+        - Client:
+        - OpenAPI version:
+    validations:
+      required: true
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: "Additional context"
+      description: "Anything else that helps us reproduce or understand the issue."
+    validations:
+      required: false

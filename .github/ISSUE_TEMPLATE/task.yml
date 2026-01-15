@@ -1,0 +1,72 @@
+name: "Task"
+description: "Implementation or maintenance task"
+labels: ["task"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for scoped work items that should turn into a PR with a clear review checklist.
+  - type: textarea
+    id: summary
+    attributes:
+      label: "Summary"
+      description: "One or two sentences describing the task."
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: "Scope"
+      description: "What is in scope?"
+      value: |
+        -
+        -
+        -
+    validations:
+      required: true
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: "Out of scope"
+      description: "What is explicitly not in scope?"
+      value: |
+        -
+        -
+    validations:
+      required: false
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: "Acceptance criteria"
+      description: "Concrete conditions to consider this done."
+      value: |
+        - [ ]
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+  - type: textarea
+    id: test_plan
+    attributes:
+      label: "Test plan"
+      description: "How should we verify this in a PR review?"
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: false
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: "Dependencies"
+      description: "Links to related issues, PRs, or external dependencies."
+    validations:
+      required: false
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: "Additional context"
+      description: "Anything else useful for reviewers."
+    validations:
+      required: false
