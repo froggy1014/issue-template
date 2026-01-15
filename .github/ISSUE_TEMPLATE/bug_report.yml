@@ -9,68 +9,15 @@ body:
         Reproduction is required. If we cannot reproduce the issue, we will close it as needs-repro.
 
         If this is OpenAPI-related, validate your spec at https://editor.swagger.io and include the results.
-  - type: input
-    id: orval_version
+  - type: textarea
+    id: config_ts
     attributes:
-      label: "Orval version"
-      placeholder: "e.g. 6.31.0"
-    validations:
-      required: true
-  - type: input
-    id: client
-    attributes:
-      label: "Client"
-      description: "Which client are you using?"
-      placeholder: "e.g. axios, fetch, react-query, angular, swr"
-    validations:
-      required: true
-  - type: input
-    id: output_mode
-    attributes:
-      label: "Output mode"
-      description: "Your output mode setting."
-      placeholder: "e.g. single, split, tags, tags-split"
-    validations:
-      required: true
-  - type: dropdown
-    id: custom_mutator
-    attributes:
-      label: "Custom mutator"
-      options:
-        - "Yes"
-        - "No"
-    validations:
-      required: true
-  - type: dropdown
-    id: validator
-    attributes:
-      label: "Schema validation"
-      options:
-        - "None"
-        - "zod"
-        - "Other (specify in Additional context)"
-        - "Not sure"
-    validations:
-      required: true
-  - type: dropdown
-    id: mocking
-    attributes:
-      label: "Mocking"
-      options:
-        - "None"
-        - "msw"
-        - "Other (specify in Additional context)"
-        - "Not sure"
-    validations:
-      required: true
-  - type: dropdown
-    id: oas_related
-    attributes:
-      label: "OpenAPI related?"
-      options:
-        - "Yes"
-        - "No"
-        - "Not sure"
+      label: "Configuration (config.ts)"
+      description: "Paste your full config.ts here."
+      value: |
+        ```ts
+        // paste your config.ts here
+        ```
     validations:
       required: true
   - type: textarea
@@ -79,19 +26,6 @@ body:
       label: "Search terms"
       description: "What did you search for before filing this issue?"
       placeholder: "e.g. react-query mutation types, openapi_31 validation error"
-    validations:
-      required: true
-  - type: textarea
-    id: reproduction
-    attributes:
-      label: "Reproduction steps"
-      description: |
-        Provide a minimal reproduction. This is required.
-        Include a repo link or a minimal code snippet and clear steps to run it.
-      value: |
-        1.
-        2.
-        3.
     validations:
       required: true
   - type: textarea
@@ -143,17 +77,6 @@ body:
         - Errors:
         - Warnings:
         - Link or screenshot:
-    validations:
-      required: false
-  - type: textarea
-    id: config
-    attributes:
-      label: "Configuration"
-      description: "Relevant generator config or options."
-      value: |
-        ```ts
-        // config snippet
-        ```
     validations:
       required: false
   - type: textarea
