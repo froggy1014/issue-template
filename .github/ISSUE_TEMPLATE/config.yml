@@ -1,5 +1,5 @@
 ---
-blank_issues_enabled: true
+blank_issues_enabled: false 
 contact_links:
   - name: "Questions (Discord)"
     url: "https://discord.com/invite/6fC2sjDU7w"
