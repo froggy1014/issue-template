@@ -7,14 +7,12 @@ body:
         Please search existing issues before filing a new one.
 
         Reproduction is required. If we cannot reproduce the issue, we will close it as needs-repro.
-
-        If this is OpenAPI-related, validate your spec at https://editor.swagger.io and include the results.
   - type: textarea
     id: description
     attributes:
       label: "Description"
-      description: "Describe the issue briefly."
-      placeholder: "e.g. react-query mutation types, openapi_31 validation error"
+      description: "Explain the issue and impact."
+      placeholder: "e.g. orval fails to generate when using tags-split with OpenAPI 3.1"
     validations:
       required: true
   - type: textarea
@@ -34,14 +32,14 @@ body:
       label: "Expected behavior"
       description: "What should happen?"
     validations:
-      required: true
+      required: false
   - type: textarea
     id: actual_behavior
     attributes:
       label: "Actual behavior"
       description: "What actually happens?"
     validations:
-      required: true
+      required: false
   - type: textarea
     id: openapi_document
     attributes:
