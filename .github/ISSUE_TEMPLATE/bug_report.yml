@@ -32,9 +32,7 @@ body:
       label: "Environment"
       description: "npx envinfo --system --npmPackages orval,zod,axios,msw,swr,@tanstack/react-query,@tanstack/vue-query,@tanstack/solid-query,@tanstack/angular-query-experimental,react,vue,solid-js,@solidjs/router,@angular/core,@angular/common"
       value: |
-        - Orval version: 7.3.0
-        - Node.js version: 18.x
-        - Framework/library versions (e.g. Next.js, React Query):
+        Run the command above and paste the output here.
     validations:
       required: true
   - type: textarea
