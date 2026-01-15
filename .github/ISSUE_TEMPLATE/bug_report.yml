@@ -10,22 +10,22 @@ body:
 
         If this is OpenAPI-related, validate your spec at https://editor.swagger.io and include the results.
   - type: textarea
-    id: config_ts
+    id: description
     attributes:
-      label: "Configuration (config.ts)"
-      description: "Paste your full config.ts here."
-      value: |
-        ```ts
-        // paste your config.ts here
-        ```
+      label: "Description"
+      description: "Describe the issue briefly."
+      placeholder: "e.g. react-query mutation types, openapi_31 validation error"
     validations:
       required: true
   - type: textarea
-    id: search_terms
+    id: config_file
     attributes:
-      label: "Search terms"
-      description: "What did you search for before filing this issue?"
-      placeholder: "e.g. react-query mutation types, openapi_31 validation error"
+      label: "Configuration (orval.config)"
+      description: "Paste your full orval.config file here."
+      value: |
+        ```ts
+        // paste your orval.config file here
+        ```
     validations:
       required: true
   - type: textarea
@@ -43,19 +43,12 @@ body:
     validations:
       required: true
   - type: textarea
-    id: openapi_version
-    attributes:
-      label: "OpenAPI version (if applicable)"
-      placeholder: "e.g. 3.0.3 or 3.1.0"
-    validations:
-      required: false
-  - type: textarea
     id: openapi_document
     attributes:
       label: "OpenAPI document (minimal, if applicable)"
       description: |
         If OpenAPI-related, provide the smallest possible OpenAPI document that reproduces the issue.
-        Paste YAML/JSON or link to a public repo/file.
+        Validate at https://editor.swagger.io, then paste the spec here (YAML/JSON) or link to a public repo/file.
       value: |
         ```yaml
         openapi: 3.0.3
@@ -66,29 +59,6 @@ body:
         ```
     validations:
       required: false
-  - type: textarea
-    id: swagger_validation
-    attributes:
-      label: "Swagger Editor validation (if applicable)"
-      description: |
-        If OpenAPI-related, validate the spec at https://editor.swagger.io and paste the results.
-        Include errors, warnings, and any link or screenshot.
-      placeholder: |
-        - Errors:
-        - Warnings:
-        - Link or screenshot:
-    validations:
-      required: false
-  - type: textarea
-    id: environment
-    attributes:
-      label: "Environment"
-      value: |
-        - OS:
-        - Node:
-        - Package manager:
-    validations:
-      required: true
   - type: textarea
     id: additional_context
     attributes:
